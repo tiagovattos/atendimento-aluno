@@ -9,22 +9,22 @@ using atendimento_aluno.Models;
 
 namespace atendimento_aluno.Controllers
 {
-    public class AtendimentoesController : Controller
+    public class AtendimentosController : Controller
     {
         private readonly Contexto _context;
 
-        public AtendimentoesController(Contexto context)
+        public AtendimentosController(Contexto context)
         {
             _context = context;
         }
 
-        // GET: Atendimentoes
+        // GET: Atendimentos
         public async Task<IActionResult> Index()
         {
               return View(await _context.Atendimento.ToListAsync());
         }
 
-        // GET: Atendimentoes/Details/5
+        // GET: Atendimentos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Atendimento == null)
@@ -42,13 +42,13 @@ namespace atendimento_aluno.Controllers
             return View(atendimento);
         }
 
-        // GET: Atendimentoes/Create
+        // GET: Atendimentos/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Atendimentoes/Create
+        // POST: Atendimentos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -64,7 +64,7 @@ namespace atendimento_aluno.Controllers
             return View(atendimento);
         }
 
-        // GET: Atendimentoes/Edit/5
+        // GET: Atendimentos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Atendimento == null)
@@ -80,7 +80,7 @@ namespace atendimento_aluno.Controllers
             return View(atendimento);
         }
 
-        // POST: Atendimentoes/Edit/5
+        // POST: Atendimentos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -115,7 +115,7 @@ namespace atendimento_aluno.Controllers
             return View(atendimento);
         }
 
-        // GET: Atendimentoes/Delete/5
+        // GET: Atendimentos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Atendimento == null)
@@ -133,7 +133,7 @@ namespace atendimento_aluno.Controllers
             return View(atendimento);
         }
 
-        // POST: Atendimentoes/Delete/5
+        // POST: Atendimentos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
