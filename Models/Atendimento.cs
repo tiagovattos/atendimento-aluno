@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace atendimento_aluno.Models
 {
     public class Atendimento
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]   
         public int Id { get; set; }
 
         [Required]

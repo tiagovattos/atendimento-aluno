@@ -7,6 +7,7 @@ namespace atendimento_aluno.Models
     public class Curso
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
